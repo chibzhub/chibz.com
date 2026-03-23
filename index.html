@@ -5,31 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chibz.com</title>
     <style>
+        /* Full page sunset background */
         body {
             font-family: Arial, sans-serif;
-            background-color: #0f172a;
             color: white;
             text-align: center;
             padding: 50px;
+            margin: 0;
+            
+            background-image: url('sunset.jpg'); /* make sure sunset.jpg is in the same folder */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
         }
+
         h1 {
-            color: #38bdf8;
+            font-size: 3em;
+            color: #FFD700; /* golden color for contrast */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
+
+        p {
+            font-size: 1.5em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
         .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+            padding: 20px 40px;
+            border-radius: 15px;
             display: inline-block;
         }
     </style>
 </head>
 <body>
-
     <div class="card">
         <h1>Welcome to Chibz.com</h1>
         <p>Hi, my name is <strong>Chibz</strong>.</p>
         <p>This is my first website hosted online 🚀</p>
     </div>
-
 </body>
 </html>
