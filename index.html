@@ -3,72 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chibz Fun Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            padding: 50px;
-            transition: background-color 0.5s ease;
-            height: 100vh;
-        }
-
-        h1 {
-            font-size: 3em;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-        }
-
-        button {
-            font-size: 1.5em;
-            padding: 15px 30px;
-            margin-top: 30px;
-            cursor: pointer;
-            border: none;
-            border-radius: 10px;
-            background-color: #FFD700;
-            color: #000;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-            transition: transform 0.2s;
-        }
-
-        button:hover {
-            transform: scale(1.1);
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Chibz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Chibz Fun Page!</h1>
-    <p>Click the button to change the background color!</p>
-    <button id="funButton">Change Color</button>
-    <p id="message"></p>
+    <header>
+        <h1>Welcome to Chibz.com</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        const button = document.getElementById('funButton');
-        const message = document.getElementById('message');
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Chibz is the place to find amazing content and services.</p>
+    </section>
 
-        const messages = [
-            "Wow! Look at that color! 🌈",
-            "Isn’t this fun? 😎",
-            "Keep clicking for more surprises! 🎉",
-            "You’re awesome for clicking this! ✨",
-            "Chibz says hi! 👋"
-        ];
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-card">Web Design</div>
+        <div class="service-card">SEO Optimization</div>
+        <div class="service-card">Marketing</div>
+    </section>
 
-        button.addEventListener('click', () => {
-            // Generate random color
-            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-            document.body.style.backgroundColor = randomColor;
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-            // Show a random message
-            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-            message.textContent = randomMessage;
-        });
-    </script>
+    <footer>
+        <p>© 2026 Chibz.com</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
