@@ -3,47 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chibz</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ChibzCompany.com | Digital Services</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0f1c;
+            color: white;
+        }
+
+        header {
+            background: #111a2e;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        nav a {
+            color: #00d4ff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+<button>buy</button>
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .card {
+            background: #1b2740;
+            padding: 20px;
+            border-radius: 12px;
+            width: 220px;
+        }
+
+        .price {
+            color: #00ff99;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .btn {
+            background: #00d4ff;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #00aacc;
+        }
+
+        footer {
+            background: #111a2e;
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
+        }
+
+        .checkout {
+            background: #111a2e;
+            margin: 30px auto;
+            padding: 20px;
+            width: 300px;
+            border-radius: 12px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to Chibz.com</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Chibz is the place to find amazing content and services.</p>
-    </section>
+<header>
+    <h1>ChibzCompany.com</h1>
+    <p>We sell digital services & grow your business online</p>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-card">Web Design</div>
-        <div class="service-card">SEO Optimization</div>
-        <div class="service-card">Marketing</div>
-    </section>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#buy">Buy</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+<section id="services">
+    <h2>Our Services</h2>
 
-    <footer>
-        <p>© 2026 Chibz.com</p>
-    </footer>
+    <div class="services">
+        <div class="card">
+            Website Design
+            <div class="price">$20</div>
+            <button class="btn" onclick="selectItem('Website Design')">Buy</button>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="card">
+            Logo Design
+            <div class="price">$10</div>
+            <button class="btn" onclick="selectItem('Logo Design')">Buy</button>
+        </div>
+
+        <div class="card">
+            Business Branding
+            <div class="price">$30</div>
+            <button class="btn" onclick="selectItem('Branding')">Buy</button>
+        </div>
+    </div>
+</section>
+
+<section id="buy">
+    <h2>Checkout</h2>
+
+    <div class="checkout">
+        <p id="selected">No item selected</p>
+
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+
+        <button class="btn">Pay Now (Demo)</button>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: support@chibzcompany.com</p>
+</section>
+
+<footer>
+    © 2026 ChibzCompany.com. All rights reserved.
+</footer>
+
+<script>
+    function selectItem(item) {
+        document.getElementById("selected").textContent = "Selected: " + item;
+    }
+</script>
+
 </body>
 </html>
+💡 Important (real talk)
